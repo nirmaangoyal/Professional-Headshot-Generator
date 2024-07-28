@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Headshot Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Headshot Generator</h1>
+        <div class="upload-area">
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+            <span id="fileName">No file chosen</span>
+        </div>
+        <button id="generateButton" class="generate-button">Generate Headshot</button>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <span>Generating headshot... Please wait.</span>
+        </div>
+        <div class="image-container">
+            <img id="resultImage" alt="Generated Headshot">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
