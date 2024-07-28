@@ -8,7 +8,8 @@ app = Flask(__name__, static_folder='templates/static')
 
 
 # Set your Stability API key
-STABILITY_API_KEY = 'Your_key'  # Replace with your actual API key
+# STABILITY_API_KEY = 'Your_key'  # Replace with your actual API key
+STABILITY_API_KEY = os.environ.get('STABILITY_API_KEY')
 
 @app.route('/')
 def index():
